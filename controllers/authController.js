@@ -1,7 +1,7 @@
 const db = require('../config/db');
 const jwt = require('jsonwebtoken');
 
-const JWT_SECRET = "CodBarber_Secret_Key_2026_@Pro"; 
+const JWT_SECRET = process.env.JWT_SECRET || 'CodBarber_Secret_Key_2026_@Pro'; 
 
 async function login(req, res) {
     const { nombre_usuario, contrasena } = req.body;

@@ -57,9 +57,10 @@ app.get('/test-db', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
+const host = '0.0.0.0';
+app.listen(port, host, () => {
     console.log(`---------------------------------------------------------`);
-    console.log(` CodBarber Server listo en http://localhost:${port}`);
+    console.log(` CodBarber Server listo en http://${host}:${port}`);
     console.log(` Protocolo de Seguridad: Sucursales e ID de Usuario Activos`);
     console.log(` Todas las rutas han sido cargadas correctamente :)`);
     console.log(`---------------------------------------------------------`);

@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const JWT_SECRET = "CodBarber_Secret_Key_2026_@Pro";
+const JWT_SECRET = process.env.JWT_SECRET || 'CodBarber_Secret_Key_2026_@Pro';
 
 const verificarToken = (req, res, next) => {
     if (req.method === 'OPTIONS') {

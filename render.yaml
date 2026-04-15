@@ -1,0 +1,15 @@
+# Blueprint para Render: New + Blueprint → pegar este repo
+# Crea la base PostgreSQL en el panel y vincúlala al servicio (DATABASE_URL se inyecta sola).
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: backend-codbarber
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
